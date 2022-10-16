@@ -10,6 +10,4 @@ nombre1 = int(nombre1)
 nombre2 = input("Entrer un deuxieme nombre; ")
 nombre2 = int(nombre2)
 
-resultat = nombre1 + nombre2
-
-print(f"Le résultat de l'addition du nombre {nombre1} avec le nombre {nombre2} est égal à {resultat}")
+print(f"Le résultat de l'addition du nombre {nombre1} avec le nombre {nombre2} est égal à {nombre1 + nombre2}")
