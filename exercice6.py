@@ -1,4 +1,2 @@
-i = 1
-while i <= 10:
-    print("Utilisateur {:d}".format(i))
-    i += 1
+for i in range(1, 11):
+    print(f"Utilisateur {i}")
