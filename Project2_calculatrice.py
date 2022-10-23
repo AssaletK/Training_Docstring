@@ -15,7 +15,7 @@ while tentative >= 0:
     if nombre1.isdigit() and nombre2.isdigit():
         nombre1 = int(nombre1)
         nombre2 = int(nombre2)
-        print(f"le resultat de l'addition de {nombre1} avec {nombre2} est égal à {nombre1 + nombre2}")
+        print(f"Le résultat de l'addition de {nombre1} avec {nombre2} est égal à {nombre1 + nombre2}")
         break
     else:
         print("Veuillez entrer deux nombres valides")
