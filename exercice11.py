@@ -1,47 +1,53 @@
 import sys
 
-liste = []
+liste_de_course = []
 choix = " "
+separator = "_" * 70
 
 while choix:
     print("Choisissez parmis les 5 options suivantes : ")
     print("1: Ajouter un élément à la liste de courses\n2: Retirer un élément de la liste de courses\n3: Afficher les éléments de la liste de courses\n4: Vider la liste de courses\n5: Quitter le programme")
     choix = input("Votre Choix : ")
     
-    if choix < "1" or choix > "5":
+    if not (choix.isdigit() and "1" <= choix <= "5"):
         print("Choisissez parmis les 5 options suivantes : ")
         print("1: Ajouter un élément à la liste de courses\n2: Retirer un élément de la liste de courses\n3: Afficher les éléments de la liste de courses\n4: Vider la liste de courses\n5: Quitter le programme")
         choix = input("Votre Choix : ")
-    elif not choix.isdigit():
-        print("Choisissez parmis les 5 options suivantes : ")
-        print("1: Ajouter un élément à la liste de courses\n2: Retirer un élément de la liste de courses\n3: Afficher les éléments de la liste de courses\n4: Vider la liste de courses\n5: Quitter le programme")
-        choix = input("Votre Choix : ")
+        print(f"{separator}\n")
+        
     else:
         if choix == "1":
             element = input("Entrer le nom d'un élément à ajouter à la liste de courses : ")
-            liste.append(element)
+            liste_de_course.append(element)
             print(f"L'élément {element} a bien été ajouté à la liste")
-            print("_______________________________________________________________________________________________________\n")
+            print(f"{separator}\n")
+        
         elif choix == "2":
             element_retire = input("Entrer le nom d'un élément à rétirer à la liste de courses : ")
-            if element_retire not in liste:
+            if element_retire not in liste_de_course:
                 print(f"L'élément {element_retire} n'est pas dans la liste.")
+            
             else:   
-                liste.remove(element_retire)
+                liste_de_course.remove(element_retire)
                 print(f"L'élément {element_retire} a bien été rétiré à la liste.")
-            print("_______________________________________________________________________________________________________\n")
+            print(f"{separator}\n")
+        
         elif choix == "3":
-            if liste:
-                for i, element in enumerate(liste):
-                    print(f"{i + 1}. {element}")
+            if liste_de_course:
+                for i, element in enumerate(liste_de_course, 1):
+                    print(f"{i}. {element}")
+            
             else:
                 print("La liste ne contient pas d'élément.")
-            print("_______________________________________________________________________________________________________\n")
+            print(f"{separator}\n")
+        
         elif choix == "4":
-            while liste:
-                for element in liste:
-                   liste.remove(element)
+            while liste_de_course:
+                for element in liste_de_course:
+                   liste_de_course.remove(element)
             print("La liste a été vidée de son contenu")
-            print("_______________________________________________________________________________________________________\n")
+            print(f"{separator}\n")
+        
         else:
-            sys.exit()
+            sys.exit("A bientot")
+            
