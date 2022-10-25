@@ -27,7 +27,7 @@ while essais > 0:
             print(f"Le nombre mystere est plus petit que {nombre_entre}.")
             print(f"Il vous reste {essais}.")
         else:    
-            print(f"Felicitations vous avez gagner au {5 - essais}e essais.")
+            print(f"Felicitations vous avez gagner au {6 - essais}e essais.")
             sys.exit()
 print(f"Desole! Le nombre mystere etait {nombre_mystere}")
 print("La partie est terminée.")
